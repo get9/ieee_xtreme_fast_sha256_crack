@@ -13,4 +13,12 @@ The general encoding algorithm is fairly straightforward. Note that all password
 3. Hash with sha256 hashing function
 4. Encode the binary result as Base64
 
-During the competition we did all of this with Python which led to a fairly short program. In order to get all possible passwords though, you would probably have to exhaustively iterate over the entire permutation space (with lengths from 0 - 19 characters), encode each one, and check it against the list of provided Base64-encoded hashes. Needless to say, this would take quite awhile with Python. Assumingly if you started early enough you could feasibly crack all of them by the end of the 24 hour period.
+During the competition we did all of this with Python which led to a fairly short program. In order to get all possible passwords though, you would probably have to exhaustively iterate over the entire permutation space (with lengths from 0 - 19 characters), encode each one, and check it against the list of provided Base64-encoded hashes.
+
+Some simple math:
+
+* 36 possible characters
+* 0 - 19 possible lengths
+* ![alt text](res/Tex2Img_1445800023.jpg "Huge!")
+
+Needless to say, this would take quite awhile with Python. Assumingly if you started early enough you could feasibly crack all of them by the end of the 24 hour period with the right amount of parallelism.
